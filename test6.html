@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript String</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<input id="inpt">
+
+<button name="BUTTON" onclick="change()">BUTTON</button>
+<script>
+    var carname = "Volvo XC60";
+    var length = carname.length;
+
+    var sentence = "Those who came from the North were called \"Vikings\"";
+
+
+    // document.getElementById("demo").innerHTML = sentence;
+    function change() {
+        var n = document.getElementById("inpt").value;
+        document.getElementById("demo").innerHTML = caculate(n).toString();
+    }
+
+    function caculate(h) {
+        let sum = 0;
+        for (let i = 0; i < h; i++) {
+            sum += (i + 1) * Math.pow(2, i);
+        }
+        return sum / (Math.pow(2, h - 1) - 1);
+    }
+</script>
+</body>
+</html>

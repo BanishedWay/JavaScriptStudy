@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<p>本例使用 HTML DOM 将 "onchange" 事件分配给输入元素。</p>
+
+请输入您的姓名：<input type="text" id="fname">
+
+<p>当您离开输入字段时，会触发一个将输入文本转换为大写的函数。</p>
+
+<script>
+    // add an onchange for label
+    // document.getElementById("fname").onchange = function () {
+    //     myFunction()
+    // };
+
+    function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+
+    // add a listener for label
+    // document.getElementById("fname").addEventListener("change", myFunction);
+
+    // test for mouse leave
+    // document.getElementById("fname").addEventListener("mouseleave", myFunction);
+    document.getElementById("fname").onmouseout = function () {
+        myFunction()
+    };
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<script>
+    let length;
+    length = 6;
+    document.getElementById("demo").innerHTML = length;
+    var x = 16 + "albert"
+    document.getElementById("demo").innerHTML = x;
+    document.writeln("Hello world<br/>");
+    document.write(typeof "John");
+    let cars = []
+    cars[1] = "Benz"
+    cars[0] = "Changan"
+    cars[2] = "Tesla"
+    for (let i = 0; i < 3; i++) {
+        document.write(cars[i] + "<br/>");
+    }
+    // 注意，实验let定义的变量不能被作为全局对象window的属性，var声明的可以
+
+    // 声明一个对象
+    var Person = {firstname: "Mike", lastname: "Smith", id: 2222};
+    document.write("<br/>" + Person.id)
+
+    // 在声明新变量时，可以使用关键词new来声明其类型
+    var x = new Number;
+
+    let c = 1, y = 2;
+
+    function testFunc(var1, var2) {
+        return var1 + var2;
+    }
+
+    function testFunc2(var1, var2) {
+        window.alert(testFunc(var1, var2));
+    }
+
+    document.write(testFunc(10, 18));
+
+</script>
+
+<button onclick="testFunc2(c,y)">click here</button>
+
+
+</body>
+</html>
