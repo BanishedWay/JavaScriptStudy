@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body>
+<p id="p1"></p>
+<script>
+    var str = "Visit China.";
+    var n = str.search(/China/i);
+    var txt = str.replace(/China/i, "USA")
+    document.getElementById("p1").innerHTML = txt;
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>字符串运算</title>
+</head>
+<p id="p1"></p>
+<body>
+<script>
+    txt1 = "What a very";
+    txt2 = "nice day.";
+    txt3 = txt1 + " " + txt2;
+    document.getElementById("p1").innerHTML = txt3;
+    // 字符串与数字相加，结果是字符串
+
+    // Compare
+    let age = 18;
+    let x = 10;
+    if (age >= 18) {
+        x = "suitable.";
+    } else {
+        x = "too young.";
+    }
+    document.getElementById("p1").innerHTML = x;
+</script>
+</body>
+</html>

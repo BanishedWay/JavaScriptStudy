@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+</head>
+<body>
+<input id="input1" value="Input" type="text">
+<button id="button1">Button</button>
+<p id="p1"></p>
+<script>
+
+
+    function myClick() {
+        let inputValue;
+        inputValue = document.getElementById("input1").value;// TODO input value 不能出现
+        let type;
+        type = typeof inputValue;
+        document.getElementById("p1").innerHTML = inputValue.constructor;
+    }
+
+    document.getElementById("button1").addEventListener("click", myClick)
+
+    // constructor属性，返回构造函数
+    function isArray(myArray) {
+        return myArray.constructor.toString().indexOf("Array") > -1;
+    }
+
+    function isDate(myDate) {
+        return myDate.constructor.toString().indexOf("Date") > -1;
+    }
+
+    myArray = ["apple", "facebook", "amazon", "microsoft"];
+    document.getElementById("p1").innerHTML = isArray(myArray);
+
+    myDate = new Date();
+    document.getElementById("p1").innerHTML = isDate(myDate);
+
+</script>
+</body>
+</html>
